@@ -11,7 +11,7 @@ def consulta():
     datos = request.get_json()
 
     # Cargar las credenciales desde el archivo JSON
-    credentials_path = '../etc/secrets/predictordiabetes-eac5e9c634e7.json'  # Reemplaza con la ruta a tu archivo de credenciales JSON
+    credentials_path = './secrets/predictordiabetes-eac5e9c634e7.json'  # Reemplaza con la ruta a tu archivo de credenciales JSON
     creds = service_account.Credentials.from_service_account_file(credentials_path)
 
     # Conectarse a Google Cloud Storage utilizando las credenciales
