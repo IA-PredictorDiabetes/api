@@ -1,0 +1,7 @@
+services:
+  - name: web
+    env:
+      - CLOUDSDK_CORE_PROJECT: "predictorDiabetes"
+      - GOOGLE_APPLICATION_CREDENTIALS: "/etc/secrets/credentials.json"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
