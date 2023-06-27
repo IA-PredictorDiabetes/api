@@ -7,5 +7,5 @@ services:
         value: "predictorDiabetes"
       - key: GOOGLE_APPLICATION_CREDENTIALS 
         value: "/etc/secrets/predictordiabetes-eac5e9c634e7.json"
-    startCommand: "./venv/bin/gunicorn app:app"
+    startCommand: ".venv/bin/gunicorn app:app"
     plan: free
