@@ -2,10 +2,8 @@ services:
   - name: web
     type: web
     runtime: python
-    env:
+    envVars:
       - CLOUDSDK_CORE_PROJECT: "predictorDiabetes"
       - GOOGLE_APPLICATION_CREDENTIALS: "/etc/secrets/predictordiabetes-eac5e9c634e7.json"
     buildCommand: "pip install -r requirements.txt"
     startCommand: "./venv/bin/gunicorn app:app"
-    files:
-      - secrets/predictordiabetes-eac5e9c634e7.json
