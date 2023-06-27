@@ -5,7 +5,7 @@ import pickle
 
 app = Flask(__name__)
 
-@app.route('/consulta', methods=['GET'])
+@app.route('/consulta', methods=['POST'])
 def consulta():
     print(1)
     # Obtener los datos de la solicitud
