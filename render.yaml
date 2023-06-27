@@ -7,6 +7,6 @@ services:
         value: "predictorDiabetes"
       - key: GOOGLE_APPLICATION_CREDENTIALS 
         value: "/etc/secrets/predictordiabetes-eac5e9c634e7.json"
-    buildCommand: "ls ./.venv" # just for debugging
+    buildCommand: "ls ./.venv/bin" # just for debugging
     startCommand: "./.venv/bin/gunicorn app:app"
     plan: free
