@@ -58,7 +58,7 @@ fastcore
 fastdownload
 fastjsonschema
 fastprogress
-Fiona.post1
+Fiona
 firebase-admin
 flatbuffers
 fonttools
