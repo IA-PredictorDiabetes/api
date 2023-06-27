@@ -135,7 +135,6 @@ keras
 kiwisolver
 langcodes
 lazy_loader
-librosa.post2
 lightgbm
 lit
 llvmlite
@@ -162,9 +161,9 @@ numexpr
 numpy
 oauth2client
 oauthlib
-opencv-contrib-python.72
-opencv-python.72
-opencv-python-headless.72
+opencv-contrib-python
+opencv-python
+opencv-python-headless
 openpyxl
 packaging
 pandas-datareader
