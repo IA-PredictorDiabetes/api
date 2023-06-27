@@ -1,7 +1,7 @@
 services:
   - name: web
-  - type: web
-  - runtime: python
+    type: web
+    runtime: python
     env:
       - CLOUDSDK_CORE_PROJECT: "predictorDiabetes"
       - GOOGLE_APPLICATION_CREDENTIALS: "/etc/secrets/predictordiabetes-eac5e9c634e7.json"
