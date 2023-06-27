@@ -41,7 +41,6 @@ cvxpy
 cymem
 dask
 db-dtypes
-dbus-python
 debugpy
 decorator
 defusedxml
