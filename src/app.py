@@ -1,19 +1,19 @@
 from flask import Flask, jsonify, request
 from google.oauth2 import service_account
 from google.cloud import storage
+from os import environ
 import pickle
 
 app = Flask(__name__)
 
 @app.route('/consulta', methods=['POST'])
 def consulta():
-    print(1)
     # Obtener los datos de la solicitud
     datos = request.get_json()
-    print(2)
 
     # Cargar las credenciales desde el archivo JSON
-    credentials_path = './secrets/predictordiabetes-eac5e9c634e7.json'  # Reemplaza con la ruta a tu archivo de credenciales JSON
+    # credentials_path = './secrets/predictordiabetes-eac5e9c634e7.json'  # Reemplaza con la ruta a tu archivo de credenciales JSON
+    credentials_path = environ.get('GOOGLE_APPLICATION_CREDENTIALS')
     creds = service_account.Credentials.from_service_account_file(credentials_path)
 
     # Conectarse a Google Cloud Storage utilizando las credenciales
