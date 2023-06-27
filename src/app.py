@@ -9,6 +9,7 @@ app = Flask(__name__)
 def consulta():
     # Obtener los datos de la solicitud
     datos = request.get_json()
+    print("aaa")
 
     # Cargar las credenciales desde el archivo JSON
     credentials_path = './secrets/predictordiabetes-eac5e9c634e7.json'  # Reemplaza con la ruta a tu archivo de credenciales JSON
@@ -34,6 +35,10 @@ def consulta():
 
     # Devolver la respuesta como JSON
     return jsonify({'resultado': resultado.tolist()})
+
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({'mensaje': '¡Hola, mundo!'})
 
 if __name__ == '__main__':
     app.run(debug=True)
