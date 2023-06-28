@@ -33,5 +33,5 @@ tensorflow
 tensorflow-datasets
 tensorflow-estimator
 tensorflow-gcs-config
-tensorflow-io-gcs-filesystem
+
 tensorflow-metadata
